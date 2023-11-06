@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   charis.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 10:36:34 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/06 11:15:07 by arlarzil         ###   ########.fr       */
+/*   Created: 2023/11/06 11:09:04 by arlarzil          #+#    #+#             */
+/*   Updated: 2023/11/06 11:13:33 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+int	ft_isalpha(int c)
+{
+	return (('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z'));
+}
 
-void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
-void	ft_putendl_fd(char *s, int fd);
+int	ft_isdigit(int c)
+{
+	return ('0' <= c && c <= '9');
+}
 
-size_t	ft_strlen(char *s);
+int	ft_isalnum(int c)
+{
+	return (ft_isdigit(c) || ft_isalpha(c));
+}
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
+int	ft_isascii(int c)
+{
+	return (0 <= c && c <= 127);
+}
 
-#endif
+int	ft_isprint(int c)
+{
+	return (32 <= c && c <= 126);
+}
