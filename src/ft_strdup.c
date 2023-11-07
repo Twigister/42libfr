@@ -43,7 +43,7 @@ char	*ft_strndup_e(const char *s, size_t n)
 
 	if (!s)
 		return (NULL);
-	if (n < 0)
+	if (n <= 0)
 		n = 0;
 	res = malloc(sizeof(char) * (n + 1));
 	if (!res)

@@ -37,6 +37,8 @@ SRCS 		=	$(SRCPATH)ft_charto.c		\
 				$(SRCPATH)ft_strlcpy.c		\
 				$(SRCPATH)ft_strtrim.c		\
 				$(SRCPATH)ft_atoi.c			\
+				$(SRCPATH)ft_puthex_fd.c	\
+				$(SRCPATH)ft_putptr.c		\
 
 INCLUDEPATH =	include/
 
