@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 10:26:17 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/07 19:28:10 by arlarzil         ###   ########.fr       */
+/*   Created: 2023/11/06 16:05:50 by arlarzil          #+#    #+#             */
+/*   Updated: 2023/11/06 16:15:39 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <libft.h>
 
-void	ft_putchar_fd(char c, int fd)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	write(fd, &c, 1);
-}
+	size_t	i;
 
-void	ft_putchar(char c)
-{
-	ft_putchar_fd(c, 1);
+	s += start;
+	i = 0;
+	while (s[i] && i < len)
+		++i;
+	return (ft_strndup_e(s, i));
 }

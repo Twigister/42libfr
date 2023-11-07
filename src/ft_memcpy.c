@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 10:26:17 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/07 19:28:10 by arlarzil         ###   ########.fr       */
+/*   Created: 2023/11/06 15:52:42 by arlarzil          #+#    #+#             */
+/*   Updated: 2023/11/06 16:15:27 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <aio.h>
 
-void	ft_putchar_fd(char c, int fd)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	write(fd, &c, 1);
-}
+	char	*res;
+	char	*base;
+	size_t	i;
 
-void	ft_putchar(char c)
-{
-	ft_putchar_fd(c, 1);
+	res = (char *)dest;
+	base = (char *)src;
+	i = 0;
+	while (i < n)
+	{
+		res[i] = base[i];
+		++i;
+	}
+	return (dest);
 }

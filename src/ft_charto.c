@@ -6,16 +6,18 @@
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 11:25:06 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/06 11:28:15 by arlarzil         ###   ########.fr       */
+/*   Updated: 2023/11/07 18:27:47 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(char c)
+int	ft_toupper(int c)
 {
-	return (c - ('a' <= c && c <= 'z') * 32);
+	if ('a' <= c && c <= 'z')
+		return (c - 32);
+	return ((unsigned char)c);
 }
 
-int	ft_tolower(char c)
+int	ft_tolower(int c)
 {
 	return (c + ('A' <= c && c <= 'Z') * 32);
 }

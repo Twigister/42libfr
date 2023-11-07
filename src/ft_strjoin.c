@@ -6,7 +6,7 @@
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 12:30:07 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/06 12:39:30 by arlarzil         ###   ########.fr       */
+/*   Updated: 2023/11/06 14:43:28 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,4 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	ft_strcpy(&ft_strcpy(res, s1)[len_s1], s2);
 	return (res);
-}
-
-int		main(int ac, char **av)
-{
-	if (ac == 3)
-	__builtin_printf("%s\n", ft_strjoin(av[1], av[2]));
 }

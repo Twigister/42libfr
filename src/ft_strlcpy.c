@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 10:26:17 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/07 19:28:10 by arlarzil         ###   ########.fr       */
+/*   Created: 2023/09/09 18:06:29 by arlarzil          #+#    #+#             */
+/*   Updated: 2023/11/07 16:52:22 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <libft.h>
 
-void	ft_putchar_fd(char c, int fd)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	write(fd, &c, 1);
-}
+	size_t	i;
 
-void	ft_putchar(char c)
-{
-	ft_putchar_fd(c, 1);
+	i = 0;
+	if (!dest || !src)
+		return (0);
+	else if (size == 0)
+		return (ft_strlen(src));
+	while (src[i] && i < size - 1)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (ft_strlen(src));
 }

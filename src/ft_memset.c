@@ -6,11 +6,12 @@
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 11:17:44 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/06 11:41:18 by arlarzil         ###   ########.fr       */
+/*   Updated: 2023/11/06 14:39:38 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <aio.h>
+#include <stddef.h>
 
 void	*ft_memset(void *s, int c, size_t n)
 {

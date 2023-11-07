@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 10:26:17 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/07 19:28:10 by arlarzil         ###   ########.fr       */
+/*   Created: 2023/11/06 16:42:32 by arlarzil          #+#    #+#             */
+/*   Updated: 2023/11/07 16:51:47 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <aio.h>
 
-void	ft_putchar_fd(char c, int fd)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	write(fd, &c, 1);
-}
+	size_t	i;
 
-void	ft_putchar(char c)
-{
-	ft_putchar_fd(c, 1);
+	i = 0;
+	while (i + 1 < n)
+	{
+		if (((const unsigned char *)s1)[i] != ((const unsigned char *)s2)[i])
+			break ;
+		++i;
+	}
+	return (((const unsigned char *)s1)[i] - ((const unsigned char *)s2)[i]);
 }

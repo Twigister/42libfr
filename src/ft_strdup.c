@@ -6,7 +6,7 @@
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 11:42:06 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/06 11:44:35 by arlarzil         ###   ########.fr       */
+/*   Updated: 2023/11/06 16:33:18 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,28 @@ char	*ft_strdup(const char *s)
 	if (!res)
 		return (NULL);
 	return (ft_strcpy(res, s));
+}
+
+char	*ft_strndup(const char *s, size_t n)
+{
+	char	*res;
+
+	res = malloc(sizeof(char) * (n));
+	if (!res)
+		return (NULL);
+	return (ft_strncpy(res, s, n));
+}
+
+char	*ft_strndup_e(const char *s, size_t n)
+{
+	char	*res;
+
+	if (n < 0)
+		n = 0;
+	res = malloc(sizeof(char) * (n + 1));
+	if (!res)
+		return (NULL);
+	ft_strncpy(res, s, n);
+	res[n] = 0;
+	return (res);
 }

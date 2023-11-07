@@ -6,7 +6,7 @@
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 10:32:29 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/06 10:39:08 by arlarzil         ###   ########.fr       */
+/*   Updated: 2023/11/07 17:10:01 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,9 @@ void	ft_putnbr_fd(int n, int fd)
 	else
 		n = -n;
 	digit_by_digit(n, fd);
+}
+
+void	ft_putnbr(int n)
+{
+	ft_putnbr_fd(n, 1);
 }

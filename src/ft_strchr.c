@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strchr.c                                           :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 11:57:55 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/06 12:09:49 by arlarzil         ###   ########.fr       */
+/*   Updated: 2023/11/06 14:40:46 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strchr(const char *s, int c)
 	while (*s && *s != (char)c)
 		++s;
 	if (*s == (char)c)
-		return (s);
+		return ((char *)s);
 	return (NULL);
 }
 
@@ -29,10 +29,10 @@ char	*ft_strrchr(const char *s, int c)
 	while (*s)
 	{
 		if (*s == (char) c)
-			res = s;
+			res = (char *)s;
 		++s;
 	}
 	if (*s == (char)c)
-		res = s;
+		res = (char *)s;
 	return (res);
 }

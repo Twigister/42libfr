@@ -6,13 +6,18 @@
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 11:38:46 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/06 12:29:03 by arlarzil         ###   ########.fr       */
+/*   Updated: 2023/11/06 15:59:10 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <libft.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	return (ft_bzero(malloc(size * nmemb), nmemb * size));
+	void	*ret;
+
+	ret = malloc(size * nmemb);
+	ft_bzero(ret, nmemb * size);
+	return (ret);
 }
