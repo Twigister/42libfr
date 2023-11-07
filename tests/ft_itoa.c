@@ -6,7 +6,7 @@
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 19:46:59 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/07 20:02:24 by arlarzil         ###   ########.fr       */
+/*   Updated: 2023/11/07 20:10:14 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int	test_itoa(void)
 		tmp = ft_itoa(test_values[res[0]]);
 		res[1] += s_to_s_test(test_names[res[0]], tmp, test_res[res[0]]);
 		++res[0];
+		free(tmp);
 	}
 	print_function_successes("ft_itoa", res[1], res[0]);
 	return (res[0] == res[1]);
