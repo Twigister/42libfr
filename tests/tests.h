@@ -15,6 +15,7 @@
 // Generic testers
 int		i_to_i_test(const char *name, int val, int comp);
 int		s_to_s_test(const char *name, const char *res, const char *cmp);
+int		a_to_a_test(const char *name, const void *res, const void *cmp);
 void	print_function_successes(const char *f_name, int successes, \
 	int test_count);
 
@@ -31,5 +32,6 @@ int		test_atoi(void);
 int		test_strncmp(void);
 int		test_itoa(void);
 int		test_strdup(void);
+int		test_strchr(void);
 
 #endif

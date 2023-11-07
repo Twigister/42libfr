@@ -21,7 +21,7 @@ int	main(void)
 	const void	*f[] = {&test_strlen, &test_toupper, &test_tolower, \
 		&test_isalpha, &test_isdigit, &test_isalnum, &test_isascii, \
 		&test_isprint, &test_atoi, &test_strncmp, &test_itoa, &test_strdup, \
-		NULL};
+		&test_strchr, NULL};
 
 	i = 0;
 	functions_passing = 0;

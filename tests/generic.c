@@ -64,3 +64,25 @@ int	s_to_s_test(const char *test_name, const char *res, const char *cmp)
 		return (0);
 	}
 }
+
+int	a_to_a_test(const char *name, const void *res, const void *cmp)
+{
+	ft_putstr((char *)name);
+	ft_putstr(": ");
+	if (res == cmp)
+	{
+		ft_putstr("PASSED\n");
+		return (1);
+	}
+	else
+	{
+		ft_putstr("FAILED: expected ");
+		ft_putptr(cmp);
+		ft_putchar(*(char*)cmp);
+		ft_putstr(" but got ");
+		ft_putptr(res);
+		ft_putchar(*(char*)res);
+		ft_putstr("\n");
+		return (0);
+	}
+}
