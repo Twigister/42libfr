@@ -6,7 +6,7 @@
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:54:02 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/07 19:11:27 by arlarzil         ###   ########.fr       */
+/*   Updated: 2023/11/07 20:28:28 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,6 +116,7 @@ int	test_isprint(void)
 
 	i = 0;
 	test_success = 0;
+	ft_putstr("Testing ft_isprint:\n");
 	while (test_names[i])
 	{
 		test_success += i_to_i_test(test_names[i], ft_isprint(test_inputs[i]), \

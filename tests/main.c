@@ -6,7 +6,7 @@
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 17:04:38 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/07 20:00:26 by arlarzil         ###   ########.fr       */
+/*   Updated: 2023/11/07 20:25:53 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ int	main(void)
 	int			functions_passing;	
 	const void	*f[] = {&test_strlen, &test_toupper, &test_tolower, \
 		&test_isalpha, &test_isdigit, &test_isalnum, &test_isascii, \
-		&test_isprint, &test_atoi, &test_strncmp, &test_itoa, NULL};
+		&test_isprint, &test_atoi, &test_strncmp, &test_itoa, &test_strdup, \
+		NULL};
 
 	i = 0;
 	functions_passing = 0;

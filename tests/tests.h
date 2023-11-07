@@ -6,7 +6,7 @@
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 17:07:53 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/07 20:03:22 by arlarzil         ###   ########.fr       */
+/*   Updated: 2023/11/07 20:26:16 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ int		test_isprint(void);
 int		test_atoi(void);
 int		test_strncmp(void);
 int		test_itoa(void);
+int		test_strdup(void);
 
 #endif
