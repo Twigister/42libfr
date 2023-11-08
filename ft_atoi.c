@@ -1,25 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 11:38:46 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/08 18:45:55 by arlarzil         ###   ########.fr       */
+/*   Created: 2023/11/06 11:28:57 by arlarzil          #+#    #+#             */
+/*   Updated: 2023/11/08 20:39:21 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include <libft.h>
-#include <limits.h>
 
-void	*ft_calloc(size_t nmemb, size_t size)
+int	ft_atoi(const char *str)
 {
-	void	*ret;
-	if (nmemb > UINT_MAX / size || nmemb * size <= 0)
-		return (NULL);
-	ret = malloc(size * nmemb);
-	ft_bzero(ret, nmemb * size);
-	return (ret);
+	int	i;
+	int	sign;
+	int	res;
+
+	sign = 1;
+	i = 0;
+	res = 0;
+	if (!str)
+		return (0);
+	while (*str == ' ' || (9 <= *str && *str <= 13))
+		++str;
+	if (str[i] == '-' || str[i] == '+')
+		if (str[i++] == '-')
+			sign = -1;
+	while (ft_isdigit(str[i]))
+	{
+		res = res * 10 + (str[i++] - '0');
+	}
+	return (res * sign);
 }

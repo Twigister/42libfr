@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 16:05:50 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/06 16:15:39 by arlarzil         ###   ########.fr       */
+/*   Created: 2023/11/06 18:13:33 by arlarzil          #+#    #+#             */
+/*   Updated: 2023/11/08 20:05:32 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include <libft.h>
-#include <stddef.h>
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+t_list	*ft_lstnew(void *content)
 {
-	size_t	i;
+	t_list	*res;
 
-	if (!s || ft_strlen(s) < start)
+	res = malloc(sizeof(t_list) * 1);
+	if (!res)
 		return (NULL);
-	s += start;
-	i = 0;
-	while (s[i] && i < len)
-		++i;
-	return (ft_strndup_e(s, i));
+	res->content = content;
+	res->next = NULL;
+	return (res);
 }

@@ -4,7 +4,7 @@ CCL			=	ar rc
 
 FLAGS 		=	-Wall -Wextra -Werror
 
-SRCPATH 	=	src/
+SRCPATH 	=	./
 
 SRCS 		=	$(SRCPATH)ft_charto.c		\
 				$(SRCPATH)ft_memcpy.c		\
@@ -40,9 +40,22 @@ SRCS 		=	$(SRCPATH)ft_charto.c		\
 				$(SRCPATH)ft_puthex_fd.c	\
 				$(SRCPATH)ft_putptr.c		\
 
-INCLUDEPATH =	include/
+SRCBONUS	=	$(SRCPATH)ft_lstnew.c		\
+				$(SRCPATH)ft_lstadd_front.c	\
+				$(SRCPATH)ft_lstsize.c		\
+				$(SRCPATH)ft_lstlast.c		\
+				$(SRCPATH)ft_lstadd_back.c	\
+				$(SRCPATH)ft_lstdelone.c	\
+				$(SRCPATH)ft_lstclear.c		\
+				$(SRCPATH)ft_lstiter.c		\
+				$(SRCPATH)ft_lstmap.c		\
+
+
+INCLUDEPATH =	./
 
 OBJ 		=	$(SRCS:.c=.o)
+
+OBJBONUS	=	$(SRCBONUS:.c=.o)
 
 NAME 		=	libft.a
 
@@ -53,15 +66,15 @@ $(NAME): $(OBJ)
 	$(CC) $(FLAGS) -c $< -I $(INCLUDEPATH) -o ${<:.c=.o}
 
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJ) $(OBJBONUS)
 	
 fclean: clean
 	rm -f $(NAME)
 
 all: $(NAME)
 
-## bonus: all
-##	$(CC) $(FLAGS) -c 
+bonus:	$(OBJ) $(OBJBONUS)
+	$(CCL) $(NAME) $(OBJ) $(OBJBONUS)
 
 re: fclean all
 

@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 18:17:29 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/06 18:20:14 by arlarzil         ###   ########.fr       */
+/*   Created: 2023/11/06 16:05:50 by arlarzil          #+#    #+#             */
+/*   Updated: 2023/11/08 20:19:57 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
+#include <stddef.h>
 
-int	ft_lstsize(t_list *lst)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	if (lst == NULL)
-		return (0);
-	return (1 + ft_lstsize(lst->next));
+	size_t	i;
+
+	if (!s)
+		return (NULL);
+	if (ft_strlen(s) < start)
+		return (ft_strdup(""));
+	s += start;
+	i = 0;
+	while (s[i] && i < len)
+		++i;
+	return (ft_strndup_e(s, i));
 }
