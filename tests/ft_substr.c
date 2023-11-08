@@ -6,7 +6,7 @@
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 16:27:16 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/08 16:30:46 by arlarzil         ###   ########.fr       */
+/*   Updated: 2023/11/08 20:43:55 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	test_substr(void)
 		NULL};
 	const t_substr	test_data[] = {{"Coucou", 0, 3}, {NULL, 0, 1}, \
 		{"Coucou", 100, 3}};
-	const char		*test_out[] = {"Cou", NULL, NULL};
+	const char		*test_out[] = {"Cou", NULL, ""};
 	int				res[2];
 	char			*tmp;
 

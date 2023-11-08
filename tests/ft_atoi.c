@@ -6,7 +6,7 @@
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 19:14:11 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/07 19:46:44 by arlarzil         ###   ########.fr       */
+/*   Updated: 2023/11/08 19:34:56 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 int	test_atoi(void)
 {
 	const char	*test_names[] = {"Zero", "Starting with 0", "INT_MAX", \
-		"INT_MIN", "123a123", "AAAAAAA", "Double+", "NULL ptr", NULL};
+		"INT_MIN", "123a123", "AAAAAAA", "Double+", "NULL ptr", "1", NULL};
 	const char	*tests[] = {"000", "0123", "2147483647", "-2147483648", \
-		"123a123", "AAAAAAA", "++123", NULL};
-	const int	res[] = {0, 123, 2147483647, -2147483648, 123, 0, 0, 0};
+		"123a123", "AAAAAAA", "++123", NULL, "1"};
+	const int	res[] = {0, 123, 2147483647, -2147483648, 123, 0, 0, 0, 1};
 	int			i;
 	int			good;
 

@@ -6,7 +6,7 @@
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 10:36:34 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/08 20:01:43 by arlarzil         ###   ########.fr       */
+/*   Updated: 2023/11/08 20:43:18 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ void	ft_puthex_fd(long n, int fd);
 void	ft_putchar(char c);
 void	ft_putstr(char *s);
 void	ft_putnbr(int n);
+void	ft_putendl(char *s);
 void	ft_putptr(const void *p);
 void	ft_puthex(long n);
 

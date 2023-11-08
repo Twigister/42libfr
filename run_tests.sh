@@ -1,4 +1,4 @@
 make 
-cc tests/*.c -Iinclude libft.a -Wall -Wextra
+cc tests/*.c -I. libft.a -Wall -Wextra
 ./a.out
 rm a.out
