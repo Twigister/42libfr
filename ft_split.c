@@ -6,7 +6,7 @@
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 14:07:05 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/06 15:59:36 by arlarzil         ###   ########.fr       */
+/*   Updated: 2023/11/08 20:55:25 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,20 @@ static char	*dup_word(char const *s, char c)
 	return (ft_strndup_e(s, get_word_len(s, c)));
 }
 
+static char	**free_split(char **p)
+{
+	int	i;
+
+	i = 0;
+	while (p[i])
+	{
+		free(p[i]);
+		++i;
+	}
+	free(p);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	int		word_count;
@@ -61,6 +75,8 @@ char	**ft_split(char const *s, char c)
 		while (*s == c)
 			++s;
 		res[i] = dup_word(s, c);
+		if (res[i] == NULL)
+			return (free_split(res));
 		while (*s && *s != c)
 			++s;
 		++i;
