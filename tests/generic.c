@@ -49,7 +49,8 @@ int	s_to_s_test(const char *test_name, const char *res, const char *cmp)
 {
 	ft_putstr((char *)test_name);
 	ft_putstr(": ");
-	if (ft_strcmp(res, cmp) == 0)
+	if ((res == NULL && cmp == NULL) || \
+		(res && cmp && ft_strcmp(res, cmp) == 0))
 	{
 		ft_putstr("PASSED\n");
 		return (1);
@@ -57,9 +58,15 @@ int	s_to_s_test(const char *test_name, const char *res, const char *cmp)
 	else
 	{
 		ft_putstr("FAILED: expected \"");
-		ft_putstr((char*)cmp);
+		if (cmp)
+			ft_putstr((char*)cmp);
+		else
+			ft_putstr("(null)");
 		ft_putstr("\" but got \"");
-		ft_putstr((char*)res);
+		if (res)
+			ft_putstr((char*)res);
+		else
+			ft_putstr("(null)");
 		ft_putstr("\"\n");
 		return (0);
 	}
@@ -83,6 +90,32 @@ int	a_to_a_test(const char *name, const void *res, const void *cmp)
 		ft_putptr(res);
 		ft_putchar(*(char*)res);
 		ft_putstr("\n");
+		return (0);
+	}
+}
+
+int	mem_eq_test(const char *name, const void *res, const void *cmp, size_t s)
+{
+	ft_putstr((char *)name);
+	ft_putstr(": ");
+	if (ft_memcmp(res, cmp, s) == 0)
+	{
+		ft_putstr("PASSED\n");
+		return (1);
+	}
+	else
+	{
+		ft_putstr("FAILED: expected \"");
+		if (cmp)
+			write(1, (char*)cmp, s);
+		else
+			ft_putstr("(null)");
+		ft_putstr("\" but got \"");
+		if (res)
+			write(1, (char*)res, s);
+		else
+			ft_putstr("(null)");
+		ft_putstr("\"\n");
 		return (0);
 	}
 }

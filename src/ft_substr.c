@@ -11,11 +11,14 @@
 /* ************************************************************************** */
 
 #include <libft.h>
+#include <stddef.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 
+	if (!s || ft_strlen(s) < start)
+		return (NULL);
 	s += start;
 	i = 0;
 	while (s[i] && i < len)
