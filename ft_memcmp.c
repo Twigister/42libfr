@@ -6,7 +6,7 @@
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:42:32 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/08 19:27:30 by arlarzil         ###   ########.fr       */
+/*   Updated: 2023/11/08 23:20:27 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		++i;
 	}
 	if (i != n)
-		return (((const unsigned char *)s1)[i] - ((const unsigned char *)s2)[i]);
+		return (((const unsigned char *)s1)[i] - \
+			((const unsigned char *)s2)[i]);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 11:38:46 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/08 19:21:03 by arlarzil         ###   ########.fr       */
+/*   Updated: 2023/11/08 23:20:44 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	if (nmemb == 0 || size == 0)
 		return (malloc(0));
 	if (size > INT_MAX / nmemb)
-		return (NULL);	
+		return (NULL);
 	ret = malloc(size * nmemb);
 	if (ret)
 		ft_bzero(ret, nmemb * size);
