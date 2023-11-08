@@ -6,7 +6,7 @@
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 17:04:38 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/07 20:25:53 by arlarzil         ###   ########.fr       */
+/*   Updated: 2023/11/08 17:55:43 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	main(void)
 		&test_isalpha, &test_isdigit, &test_isalnum, &test_isascii, \
 		&test_isprint, &test_atoi, &test_strncmp, &test_itoa, &test_strdup, \
 		&test_strchr, &test_substr, &test_strjoin, &test_strtrim, \
-		test_striteri, NULL};
+		&test_striteri, &test_memcmp, NULL};
 
 	i = 0;
 	functions_passing = 0;

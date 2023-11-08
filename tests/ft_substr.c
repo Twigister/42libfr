@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/08 16:27:16 by arlarzil          #+#    #+#             */
+/*   Updated: 2023/11/08 16:30:46 by arlarzil         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 #include <libft.h>
 #include <stddef.h>
@@ -15,8 +27,10 @@ typedef struct s_substr {
 
 int	test_substr(void)
 {
-	const char		*test_names[] = {"1st chars", "NULL ptr", "Start out of range", NULL};
-	const t_substr	test_data[] = {{"Coucou", 0, 3}, {NULL, 0, 1}, {"Coucou", 100, 3}, };
+	const char		*test_names[] = {"1st chars", "NULL ptr", "Start OOR", \
+		NULL};
+	const t_substr	test_data[] = {{"Coucou", 0, 3}, {NULL, 0, 1}, \
+		{"Coucou", 100, 3}};
 	const char		*test_out[] = {"Cou", NULL, NULL};
 	int				res[2];
 	char			*tmp;
@@ -26,7 +40,7 @@ int	test_substr(void)
 	ft_putstr("Testing ft_substr:\n");
 	while (test_names[res[0]])
 	{
-		tmp =  ft_substr(test_data[res[0]].str, test_data[res[0]].start, \
+		tmp = ft_substr(test_data[res[0]].str, test_data[res[0]].start, \
 			test_data[res[0]].len);
 		res[1] += s_to_s_test(test_names[res[0]], tmp, test_out[res[0]]);
 		++res[0];

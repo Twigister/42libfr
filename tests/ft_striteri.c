@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/08 16:26:11 by arlarzil          #+#    #+#             */
+/*   Updated: 2023/11/08 16:29:18 by arlarzil         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 #include <libft.h>
 #include <stddef.h>
@@ -26,8 +38,9 @@ int	test_striteri(void)
 {
 	const char		*test_names[] = {"Basic test", "Basic test 2", \
 		"No function", "No string", "Empty string", NULL};
-	const t_substr	test_data[] = {{"Coucou", test_func1}, {"coucou", test_func2}, \
-		{"Coucou", NULL}, {NULL, test_func1}, {"", test_func1}};
+	const t_substr	test_data[] = {{"Coucou", test_func1}, \
+		{"coucou", test_func2}, {"Coucou", NULL}, {NULL, test_func1}, \
+		{"", test_func1}};
 	const char		*test_out[] = {"012345", "COUCOU", "Coucou", NULL, ""};
 	int				res[2];
 	char			*tmp;

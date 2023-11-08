@@ -6,7 +6,7 @@
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 19:30:13 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/07 19:46:00 by arlarzil         ###   ########.fr       */
+/*   Updated: 2023/11/08 16:59:07 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ typedef struct s_strpair {
 
 int	test_strncmp(void)
 {
-	const char		*test_names[] = {"Identical, n too long", "Not identical", \
+	const char		*test_names[] = {"Identical, n too big", "Not identical", \
 		"NULL ptr", "n=0", NULL};
-	const t_strpair	tests[] = {{"Coucou", "Coucou", 100}, {"Coucou", "Salut", 123}, \
-		{NULL, NULL, 123}, {"Wesh", "Non", 0}};
+	const t_strpair	tests[] = {{"Coucou", "Coucou", 100}, {"Coucou", "Salut", \
+		123}, {NULL, NULL, 123}, {"Wesh", "Non", 0}};
 	const int		res[] = {0, 'C' - 'S', 0, 0};
 	int				i;
 	int				good;

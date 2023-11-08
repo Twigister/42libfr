@@ -6,7 +6,7 @@
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 19:46:59 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/07 20:24:02 by arlarzil         ###   ########.fr       */
+/*   Updated: 2023/11/08 16:26:04 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@
 
 int	test_itoa(void)
 {
-	const char	*test_names[] = {"ZERO", "POS", "NEG", "INT_MIN", "INT_MAX", NULL};
+	const char	*test_names[] = {"ZERO", "POS", "NEG", "INT_MIN", \
+		"INT_MAX", NULL};
 	const int	test_values[] = {0, 101, -951, -2147483648, 2147483647};
 	const char	*test_res[] = {"0", "101", "-951", "-2147483648", "2147483647"};
 	int			res[2];
 	char		*tmp;
-	
 
 	res[0] = 0;
 	res[1] = 0;

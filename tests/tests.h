@@ -6,14 +6,15 @@
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 17:07:53 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/07 20:26:16 by arlarzil         ###   ########.fr       */
+/*   Updated: 2023/11/08 17:55:04 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef TESTS_H
 # define TESTS_H
 
-#include <stddef.h>
+# include <libft.h>
+# include <stdlib.h>
 // Generic testers
 int		i_to_i_test(const char *name, int val, int comp);
 int		s_to_s_test(const char *name, const char *res, const char *cmp);
@@ -41,5 +42,6 @@ int		test_substr(void);
 int		test_strjoin(void);
 int		test_strtrim(void);
 int		test_striteri(void);
+int		test_memcmp(void);
 
 #endif

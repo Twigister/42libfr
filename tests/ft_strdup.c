@@ -6,7 +6,7 @@
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 20:17:05 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/07 20:29:53 by arlarzil         ###   ########.fr       */
+/*   Updated: 2023/11/08 16:26:33 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
 
 int	test_strdup(void)
 {
-	const char	*test_names[] = {"Standard string", "NULL ptr", "Empty string", NULL};
+	const char	*test_names[] = {"Standard string", "NULL ptr", \
+		"Empty string", NULL};
 	const char	*test_values[] = {"Standard", NULL, ""};
 	const char	*exp_ret[] = {"Standard", NULL, ""};
 	int			res[2];

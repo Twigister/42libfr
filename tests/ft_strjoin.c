@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/08 16:26:42 by arlarzil          #+#    #+#             */
+/*   Updated: 2023/11/08 16:29:47 by arlarzil         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 #include <libft.h>
 #include <stddef.h>
@@ -6,7 +18,7 @@
 typedef struct s_join {
 	char	*s1;
 	char	*s2;
-} t_join;
+}	t_join;
 
 // A ecrire:
 // Avec des ptrs NULL

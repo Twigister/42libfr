@@ -6,7 +6,7 @@
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:54:02 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/07 20:05:30 by arlarzil         ###   ########.fr       */
+/*   Updated: 2023/11/08 16:28:28 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,12 +59,12 @@ int	s_to_s_test(const char *test_name, const char *res, const char *cmp)
 	{
 		ft_putstr("FAILED: expected \"");
 		if (cmp)
-			ft_putstr((char*)cmp);
+			ft_putstr((char *)cmp);
 		else
 			ft_putstr("(null)");
 		ft_putstr("\" but got \"");
 		if (res)
-			ft_putstr((char*)res);
+			ft_putstr((char *)res);
 		else
 			ft_putstr("(null)");
 		ft_putstr("\"\n");
@@ -85,10 +85,10 @@ int	a_to_a_test(const char *name, const void *res, const void *cmp)
 	{
 		ft_putstr("FAILED: expected ");
 		ft_putptr(cmp);
-		ft_putchar(*(char*)cmp);
+		ft_putchar(*(char *)cmp);
 		ft_putstr(" but got ");
 		ft_putptr(res);
-		ft_putchar(*(char*)res);
+		ft_putchar(*(char *)res);
 		ft_putstr("\n");
 		return (0);
 	}
@@ -107,12 +107,12 @@ int	mem_eq_test(const char *name, const void *res, const void *cmp, size_t s)
 	{
 		ft_putstr("FAILED: expected \"");
 		if (cmp)
-			write(1, (char*)cmp, s);
+			write(1, (char *)cmp, s);
 		else
 			ft_putstr("(null)");
 		ft_putstr("\" but got \"");
 		if (res)
-			write(1, (char*)res, s);
+			write(1, (char *)res, s);
 		else
 			ft_putstr("(null)");
 		ft_putstr("\"\n");
