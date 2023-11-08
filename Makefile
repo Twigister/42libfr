@@ -6,7 +6,8 @@ FLAGS 		=	-Wall -Wextra -Werror
 
 SRCPATH 	=	./
 
-SRCS 		=	$(SRCPATH)ft_charto.c		\
+SRCS 		=	$(SRCPATH)ft_tolower.c		\
+				$(SRCPATH)ft_toupper.c		\
 				$(SRCPATH)ft_memcpy.c		\
 				$(SRCPATH)ft_putnbr_fd.c	\
 				$(SRCPATH)ft_strdup.c		\
@@ -28,9 +29,14 @@ SRCS 		=	$(SRCPATH)ft_charto.c		\
 				$(SRCPATH)ft_memchr.c		\
 				$(SRCPATH)ft_putchar_fd.c	\
 				$(SRCPATH)ft_strchr.c		\
+				$(SRCPATH)ft_strrchr.c		\
 				$(SRCPATH)ft_strlcat.c		\
 				$(SRCPATH)ft_strnstr.c		\
-				$(SRCPATH)ft_charis.c		\
+				$(SRCPATH)ft_isalnum.c		\
+				$(SRCPATH)ft_isalpha.c		\
+				$(SRCPATH)ft_isascii.c		\
+				$(SRCPATH)ft_isdigit.c		\
+				$(SRCPATH)ft_isprint.c		\
 				$(SRCPATH)ft_memcmp.c		\
 				$(SRCPATH)ft_putendl_fd.c	\
 				$(SRCPATH)ft_strcpy.c		\

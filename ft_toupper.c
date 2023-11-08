@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 11:57:55 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/06 14:40:46 by arlarzil         ###   ########.fr       */
+/*   Created: 2023/11/08 23:25:17 by arlarzil          #+#    #+#             */
+/*   Updated: 2023/11/08 23:25:18 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-char	*ft_strchr(const char *s, int c)
+int	ft_toupper(int c)
 {
-	if (!s)
-		return (NULL);
-	while (*s && *s != (char)c)
-		++s;
-	if (*s == (char)c)
-		return ((char *)s);
-	return (NULL);
+	if ('a' <= c && c <= 'z')
+		return (c - 32);
+	return ((unsigned char)c);
 }

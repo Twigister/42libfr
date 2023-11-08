@@ -1,36 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_charis.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/06 11:09:04 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/06 11:13:33 by arlarzil         ###   ########.fr       */
+/*   Created: 2023/11/08 23:25:06 by arlarzil          #+#    #+#             */
+/*   Updated: 2023/11/08 23:35:10 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+int	ft_tolower(int c)
 {
-	return (('A' <= c && c <= 'Z') || ('a' <= c && c <= 'z'));
-}
-
-int	ft_isdigit(int c)
-{
-	return ('0' <= c && c <= '9');
-}
-
-int	ft_isalnum(int c)
-{
-	return (ft_isdigit(c) || ft_isalpha(c));
-}
-
-int	ft_isascii(int c)
-{
-	return (0 <= c && c <= 127);
-}
-
-int	ft_isprint(int c)
-{
-	return (32 <= c && c <= 126);
+	return (c + ('A' <= c && c <= 'Z') * 32);
 }
