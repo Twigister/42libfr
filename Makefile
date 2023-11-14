@@ -69,7 +69,7 @@ $(NAME): $(OBJ)
 	$(CCL) $(NAME) $(OBJ)
 
 .c.o:
-	$(CC) $(FLAGS) -c $< -I $(INCLUDEPATH) -o ${<:.c=.o}
+	$(CC) $(FLAGS) -c $< -o ${<:.c=.o}
 
 clean:
 	rm -f $(OBJ) $(OBJBONUS)
