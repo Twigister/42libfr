@@ -2,7 +2,7 @@ CC			=	cc
 
 CCL			=	ar rc
 
-FLAGS 		=	-Wall -Wextra -Werror
+FLAGS 		=	-Wall -Wextra -Werror -fPIC
 
 SRCPATH 	=	./
 
@@ -84,7 +84,3 @@ bonus:	$(OBJ) $(OBJBONUS)
 re: fclean all
 
 .PHONY: clean fclean all re
-
-so: $(OBJ) $(OBJBONUS)
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(SRCBONUS)
-	gcc -nostartfiles -shared -o libft.so $(OBJ) $(OBJBONUS)

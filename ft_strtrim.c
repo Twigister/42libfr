@@ -28,6 +28,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int	len;
 
 	len = 0;
+	if (!s1 || !set)
+		return (0);
 	while (*s1 && is_in_charset(*s1, set))
 		++s1;
 	while (s1[len])

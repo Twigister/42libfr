@@ -17,7 +17,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	size_t	i;
 
 	i = 0;
-	if (!s1 || !s2 || n == 0)
+	if (n == 0)
 		return (0);
 	while (*s1 && i + 1 < n)
 	{
@@ -28,19 +28,4 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		++i;
 	}
 	return ((unsigned char)*s1 - (unsigned int)*s2);
-}
-
-int	ft_strcmp(const char *s1, const char *s2)
-{
-	size_t	i;
-
-	i = 0;
-	if (!s1 || !s2)
-		return (0);
-	while (*s1 && i && *s1 == *s2)
-	{
-		++s1;
-		++s2;
-	}
-	return (*s1 - *s2);
 }

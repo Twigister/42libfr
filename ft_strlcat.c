@@ -19,11 +19,13 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	src_len;
 
 	i = 0;
+	if (!size && (!dest || !src))
+		return (0);
 	dest_len = ft_strlen(dest);
 	src_len = ft_strlen(src);
 	if (size <= dest_len)
 		return (src_len + size);
-	while ((i < size - dest_len - 1) && src[i])
+	while ((i + 1 < size - dest_len) && src[i])
 	{
 		dest[dest_len + i] = src[i];
 		i++;

@@ -17,8 +17,6 @@ char	*ft_strdup(const char *s)
 {
 	char	*res;
 
-	if (!s)
-		return (NULL);
 	res = malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!res)
 		return (NULL);
@@ -28,13 +26,17 @@ char	*ft_strdup(const char *s)
 char	*ft_strndup(const char *s, size_t n)
 {
 	char	*res;
+	size_t	len;
 
-	if (!s || !n)
+	if (!n)
 		return (NULL);
-	res = malloc(sizeof(char) * (n));
+	len = ft_strlen(s);
+	res = malloc(sizeof(char) * (n + 1));
 	if (!res)
 		return (NULL);
-	return (ft_strncpy(res, s, n));
+	ft_strncpy(res, s, n);
+	res[n] = 0;
+	return (res);
 }
 
 char	*ft_strndup_e(const char *s, size_t n)
