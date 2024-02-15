@@ -13,7 +13,6 @@ SRCS 		=	$(SRCPATH)ft_tolower.c		\
 				$(SRCPATH)ft_strdup.c		\
 				$(SRCPATH)ft_strlen.c		\
 				$(SRCPATH)ft_substr.c		\
-				$(SRCPATH)ft_bzero.c		\
 				$(SRCPATH)ft_itoa.c			\
 				$(SRCPATH)ft_memmove.c		\
 				$(SRCPATH)ft_putstr_fd.c	\
@@ -85,3 +84,7 @@ bonus:	$(OBJ) $(OBJBONUS)
 re: fclean all
 
 .PHONY: clean fclean all re
+
+so: $(OBJ) $(OBJBONUS)
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(SRCBONUS)
+	gcc -nostartfiles -shared -o libft.so $(OBJ) $(OBJBONUS)
