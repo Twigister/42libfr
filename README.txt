@@ -16,6 +16,7 @@ ft_lstiter
 ft_lstlast
 ft_lstmap
 ft_lstsize
+ft_putchar_fd
 
 - Functions I don't think can be optimized
 ft_calloc
@@ -29,14 +30,12 @@ ft_lstnew
 ft_striteri
 ft_strmapi
 Might benefit from goind iterative, might not
-ft_putchar_fd
 ft_puthex_fd
 ft_putnbr_fd
 ft_putptr
 
 - Works in progress
 ft_memset
-
 
 - Still the basic version needed to validate the project
 ft_strncpy
