@@ -7,6 +7,7 @@ ft_putstr_fd
 ft_strdup (Subversions might benefit from a rework)
 ft_strlen
 ft_memcpy
+ft_strcpy
 
 - Functions I don't think can be optimized
 ft_calloc
@@ -30,6 +31,7 @@ ft_memset
 
 
 - Still the basic version needed to validate the project
+ft_strncpy
 ft_atoi.c (Integer overflow not managed)
 ft_itoa.c
 ft_memchr
@@ -37,7 +39,6 @@ ft_memcmp
 ft_memmove
 ft_split
 ft_strchr
-ft_strcpy
 ft_strjoin
 ft_strlcat
 ft_strlcpy
