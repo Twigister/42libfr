@@ -9,6 +9,13 @@ ft_strlen
 ft_memcpy
 ft_strcpy
 ft_strjoin
+ft_lstadd_front
+ft_lstadd_back
+ft_lstclear
+ft_lstiter
+ft_lstlast
+ft_lstmap
+ft_lstsize
 
 - Functions I don't think can be optimized
 ft_calloc
@@ -49,14 +56,6 @@ ft_strtrim
 ft_substr
 ft_tolower
 ft_toupper
-These are made in a recursive maneer but would benefit to be iterative
-ft_lstadd_front
-ft_lstadd_back
-ft_lstclear
-ft_lstiter
-ft_lstlast
-ft_lstmap
-ft_lstsize
 
 Might be some nice additions in the future
 ft_pow
