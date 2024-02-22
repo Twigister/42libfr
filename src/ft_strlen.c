@@ -28,10 +28,3 @@ size_t	ft_strlen(const char *s)
 		++e;
 	return (e - s);
 }
-
-#include <stdio.h>
-
-int	main(int ac, char **av)
-{
-	printf("%d\n", ft_strlen(av[ac - 1]));
-}
