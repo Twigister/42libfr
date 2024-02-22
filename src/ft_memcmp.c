@@ -6,7 +6,7 @@
 /*   By: arlarzil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:42:32 by arlarzil          #+#    #+#             */
-/*   Updated: 2023/11/08 23:20:27 by arlarzil         ###   ########.fr       */
+/*   Updated: 2024/02/22 10:15:09 by arlarzil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,19 @@
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t	i;
+	const char	*m1;
+	const char	*m2;
 
+	m1 = s1;
+	m2 = s2;
 	i = 0;
 	while (i < n << 3)
 	{
 		if ((*(const long long *)s1) != *((const long long *)s2))
 			break ;
 		i += 8;
-		(const long long *)s1++;
-		(const long long *)s2++;
+		m1 += 8;
+		m2 += 8;
 	}
 	while (i + 1 < n)
 	{
