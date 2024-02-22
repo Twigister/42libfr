@@ -18,6 +18,7 @@ ft_lstmap
 ft_lstsize
 ft_putchar_fd
 ft_memcmp (A tester intensivement mais should be OKE)
+ft_memmove
 
 - Functions I don't think can be optimized
 ft_calloc
@@ -43,7 +44,6 @@ ft_strncpy
 ft_atoi.c (Integer overflow not managed)
 ft_itoa.c
 ft_memchr
-ft_memmove
 ft_split
 ft_strchr
 ft_strlcat

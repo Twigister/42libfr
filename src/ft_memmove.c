@@ -20,20 +20,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	if (dest == src)
 		return (dest);
 	if (dest < src)
-	{
-		while (i < n)
-		{
-			((char *)dest)[i] = ((char *)src)[i];
-			++i;
-		}
-	}
+		return (ft_memcpy(dest, src, n));
 	else
-	{
-		while (n)
-		{
-			((char *)dest)[n - 1] = ((char *)src)[n - 1];
-			n--;
-		}
-	}
-	return (dest);
+		return (ft_memrcpy(dest, src, n));
 }
