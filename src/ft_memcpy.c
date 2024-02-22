@@ -15,26 +15,20 @@
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	void		*res;
-	const void	*base;
-	size_t		i;
-	size_t		block_count;
 
 	if (!dest && !src)
 		return (0);
 	res = dest;
-	base = src;
-	block_count = n / sizeof(long long);
-	i = 0;
-	while (i < block_count)
+	while (n >= 8)
 	{
-		((long long *)res)[i] = ((long long *)base)[i];
-		++i;
+		(*(long long *)res++) = (*(long long *)src++);
+		n -= 8;
 	}
-	i = i * sizeof(long long);
-	while (i < n)
-	{
-		((char *)res)[i] = ((char *)base)[i];
-		++i;
-	}
+	if (n & 4)
+		*((int *)dest++) = *((int *)src++);
+	if (n & 2)
+		*((short *)dest++) = *((short *)src++);
+	if (n & 1)
+		*((char *)dest) = *((char *)src);
 	return (dest);
 }

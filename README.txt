@@ -6,6 +6,7 @@ ft_bzero.c (Using my implem of ft_memset)
 ft_putstr_fd
 ft_strdup (Subversions might benefit from a rework)
 ft_strlen
+ft_memcpy
 
 - Functions I don't think can be optimized
 ft_calloc
@@ -25,7 +26,6 @@ ft_putnbr_fd
 ft_putptr
 
 - Works in progress
-ft_memcpy
 ft_memset
 
 
