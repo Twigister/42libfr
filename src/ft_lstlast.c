@@ -20,6 +20,6 @@ t_list	*ft_lstlast(t_list *lst)
 	if (!lst || !lst->next)
 		return (lst);
 	while (cur->next)
-		cur = lst->next;
+		cur = cur->next;
 	return (cur);
 }

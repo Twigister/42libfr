@@ -87,4 +87,4 @@ re: fclean all
 
 so:
 	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(SRCBONUS)
-	gcc -nostartfiles -shared -o libft.so $(OBJ) $(OBJ) $(OBJBONUS)
+	gcc -nostartfiles -shared -o libft.so $(OBJ) $(OBJBONUS)

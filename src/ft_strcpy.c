@@ -11,22 +11,11 @@
 /* ************************************************************************** */
 
 #include <aio.h>
+#include "libft.h"
 
 char	*ft_strcpy(char *dest, const char *src)
 {
-	char	*res;
-
-	res = dest;
-	while (!(((*(long long *)src) - 0x0101010101010101) & 0x8080808080808080))
-		*((long long *)dest++) = *((long long *)src++);
-	if (!(((*(int *)src) - 0x01010101) & 0x80808080))
-		*((int *)dest++) = *((int *)src++);
-	if (!((*(short *)src - 0x0101) & 0x8080))
-		*((short *)dest++) = *((short *)src++);
-	if (*src)
-		*(dest++) = *src; 
-	*dest = 0;
-	return (res);
+	return (ft_memcpy(dest, src, ft_strlen(src) + 1));
 }
 
 char	*ft_strncpy(char *dest, const char *src, size_t n)

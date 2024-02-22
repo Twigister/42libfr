@@ -11,25 +11,35 @@
 /* ************************************************************************** */
 
 #include <aio.h>
+#include <stdint.h>
+#include <stdio.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	void		*res;
-
+	char *(res) = dest;
 	if (!dest && !src)
 		return (0);
-	res = dest;
 	while (n >= 8)
 	{
-		(*(long long *)res++) = (*(long long *)src++);
+		*((long long *)res) = *((long long *)src);
+		res += 8;
+		src += 8;
 		n -= 8;
 	}
 	if (n & 4)
-		*((int *)dest++) = *((int *)src++);
+	{
+		*((int *)res) = *((int *)src);
+		src += 4;
+		res += 4;
+	}
 	if (n & 2)
-		*((short *)dest++) = *((short *)src++);
+	{
+		*((short *)res) = *((short *)src);
+		res += 2;
+		src += 2;
+	}
 	if (n & 1)
-		*((char *)dest) = *((char *)src);
+		*((char *)res) = *((char *)src);
 	return (dest);
 }
 
@@ -39,17 +49,18 @@ void	*ft_memrcpy(void *dest, const void *src, size_t n)
 
 	if (!dest && !src)
 		return (0);
-	res = dest;
+	res = dest + n;
 	while (n >= 8)
 	{
-		(*(long long *)res--) = (*(long long *)src--);
+		res -= 8;
+		src -= 8;
 		n -= 8;
+		(*(long long *)res) = (*(long long *)src);
 	}
-	if (n & 4)
-		*((int *)dest--) = *((int *)src--);
-	if (n & 2)
-		*((short *)dest--) = *((short *)src--);
-	if (n & 1)
-		*((char *)dest) = *((char *)src);
+	while (n)
+	{
+		*((uint8_t *)--res) = *((uint8_t *)--src);
+		--n;
+	}
 	return (dest);
 }

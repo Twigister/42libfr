@@ -18,7 +18,6 @@ ft_lstmap
 ft_lstsize
 ft_putchar_fd
 ft_memcmp (A tester intensivement mais should be OKE)
-ft_memmove
 
 - Functions I don't think can be optimized
 ft_calloc
@@ -55,6 +54,7 @@ ft_strtrim
 ft_substr
 ft_tolower
 ft_toupper
+ft_memmove
 
 Might be some nice additions in the future
 ft_pow
