@@ -8,6 +8,7 @@ ft_strdup (Subversions might benefit from a rework)
 ft_strlen
 ft_memcpy
 ft_strcpy
+ft_strjoin
 
 - Functions I don't think can be optimized
 ft_calloc
@@ -39,7 +40,6 @@ ft_memcmp
 ft_memmove
 ft_split
 ft_strchr
-ft_strjoin
 ft_strlcat
 ft_strlcpy
 ft_strncmp (And sub)
@@ -60,3 +60,4 @@ ft_lstsize
 
 Might be some nice additions in the future
 ft_pow
+ft_atoi_base
