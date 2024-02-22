@@ -4,7 +4,7 @@ CCL			=	ar rc
 
 FLAGS 		=	-Wall -Wextra -Werror -fPIC
 
-SRCPATH 	=	./
+SRCPATH 	=	./src/
 
 SRCS 		=	$(SRCPATH)ft_tolower.c		\
 				$(SRCPATH)ft_toupper.c		\
